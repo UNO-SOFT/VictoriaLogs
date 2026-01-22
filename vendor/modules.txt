@@ -1,4 +1,4 @@
-# github.com/VictoriaMetrics/VictoriaMetrics v1.134.0 => github.com/VictoriaMetrics/VictoriaMetrics v1.134.1-0.20260119142925-34f242a6b861
+# github.com/VictoriaMetrics/VictoriaMetrics v1.134.0 => github.com/UNO-SOFT/VictoriaMetrics v0.0.0-20260122110104-7e0a57759866
 ## explicit; go 1.25.6
 github.com/VictoriaMetrics/VictoriaMetrics/lib/appmetrics
 github.com/VictoriaMetrics/VictoriaMetrics/lib/atomicutil

@@ -30,3 +30,5 @@ require (
 	golang.org/x/sys v0.40.0 // indirect
 	golang.org/x/text v0.33.0 // indirect
 )
+
+replace github.com/VictoriaMetrics/VictoriaMetrics v1.134.0 => github.com/UNO-SOFT/VictoriaMetrics v0.0.0-20260122110104-7e0a57759866

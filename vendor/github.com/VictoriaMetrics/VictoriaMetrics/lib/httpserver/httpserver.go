@@ -138,7 +138,13 @@ func serve(addr string, rh RequestHandler, idx int, opts ServeOptions) {
 		}
 		tlsConfig = tc
 	}
-	ln, err := netutil.NewTCPListener(scheme, addr, useProxyProto, tlsConfig)
+	var ln net.Listener
+	var err error
+	if addr, ok := strings.CutPrefix(addr, "unix:"); ok {
+		ln, err = net.ListenUnix("unix", &net.UnixAddr{Net: "unix", Name: addr})
+	} else {
+		ln, err = netutil.NewTCPListener(scheme, addr, useProxyProto, tlsConfig)
+	}
 	if err != nil {
 		logger.Fatalf("cannot start http server at %s: %s", addr, err)
 	}
